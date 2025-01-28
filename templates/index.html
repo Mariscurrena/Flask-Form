@@ -4,13 +4,22 @@
 
 {% block content %}
 
-<div class="form">
-    <h1>Hello Flask and Docker World</h1>
-    <p>This will be the first form that I made</p>
-    <br>
-    <a href="./form">
-        <button class="navigation">Go to Form</button>
-    </a>
+<div class="main">
+    <div class="item imgdiv">
+        <h1>SQL Injection Lab</h1>
+        <img class="img_size" src="{{ url_for('static', filename='images/injection.png') }}" alt="Injection Icon">
+    </div>
+    <div class="item text">
+        <p class="textparr">This lab was performed in order to observe what an SQL injection vulnerability looks like.</p>
+        <p class="textparr">The main objective of this is to explain and be aware of the critical risk that insecure code poses to data.</p>
+        <p class="textparr">The sole purpose of this is educational, anything you do with the information learned here is your responsibility.</p>
+        <p class="textparr">Remember that exploiting vulnerabilities outside your own environments without permission is illegal.</p>
+    </div>
+    <div class="item">
+        <a href="./form">
+            <button class="navigation">Go to Form</button>
+        </a>
+    </div>
 </div>
 
 {% endblock %}
