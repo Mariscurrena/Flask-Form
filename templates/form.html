@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} SQL Injection Form {% endblock %}
+
+{% block content %}
+    <div>
+        <h2>Enter your credentials</h2>
+        <form method="'POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.user.label() }}
+                {{ form.user() }}
+            </div>
+            <div>
+                {{ form.pwd.label() }}
+                {{ form.pwd() }}
+            </div>
+            {{ form.submit() }}
+        </form>
+    </div>
+{% endblock %}
