@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, flash
 from form import UserData
 import os
 
@@ -14,6 +14,10 @@ def index():
 @app.route('/form', methods=['GET','POST'])
 def form():
     form = UserData()
+    if form.validate_on_submit():
+        username = form.user.data
+        password = form.pwd.data
+        flash(f'Welcome back, {username}', 'success')
     return render_template('form.html', form=form)
 
 if __name__ == "__main__":
