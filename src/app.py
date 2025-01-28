@@ -3,7 +3,7 @@ from form import UserData
 import os
 
 #Allows to make the reference into the templates folder
-app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), '..', 'templates'))
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), '..', 'templates'), static_folder=os.path.join(os.path.dirname(__file__), '..', 'static'))
 app.config['SECRET_KEY'] = 'your_secret_key'
 
 @app.route('/')

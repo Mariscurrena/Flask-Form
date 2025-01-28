@@ -5,7 +5,7 @@
 {% block content %}
     <div>
         <h2>Enter your credentials</h2>
-        <form method="'POST">
+        <form method="POST">
             {{ form.hidden_tag() }}
             <div>
                 {{ form.user.label() }}
@@ -17,8 +17,9 @@
             </div>
             {{ form.submit() }}
         </form>
+        <br>
         <a href="./">
-            <button>Go Back</button>
+            <button class="navigation">Go Back</button>
         </a>
     </div>
 {% endblock %}
