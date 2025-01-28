@@ -4,22 +4,42 @@
 
 {% block content %}
     <div>
-        <h2>Enter your credentials</h2>
-        <form method="POST">
-            {{ form.hidden_tag() }}
-            <div>
-                {{ form.user.label() }}
-                {{ form.user() }}
+        <div class="item imgdiv">
+            <div class="center">
+                <img class="img_size" src="{{ url_for('static', filename='images/fortify.png') }}" alt="Fortify Icon">
             </div>
-            <div>
-                {{ form.pwd.label() }}
-                {{ form.pwd() }}
+            <div class="center">
+                <h1>SQL Injection Lab</h1>
             </div>
-            {{ form.submit() }}
-        </form>
-        <br>
-        <a href="./">
-            <button class="navigation">Go Back</button>
-        </a>
+            <div class="center">
+                <img class="img_size" src="{{ url_for('static', filename='images/injection.png') }}" alt="Injection Icon">
+            </div>
+        </div>
+        <div class="main_form">
+            <div class="item-form invisible">
+                <h3 class="invisible">Enter your credentials</h3>
+            </div>
+            <div class="item-form invisible">
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class="invisible form">
+                        {{ form.user.label(class="form-label") }}
+                        {{ form.user(class="form-control") }}
+                    </div>
+                    <div class="invisible form">
+                        {{ form.pwd.label(class="form-label") }}
+                        {{ form.pwd(class="form-control") }}
+                    </div>
+                    <div class="invisible form">
+                        {{ form.submit(class="navigation") }}
+                    </div>
+                </form>
+            </div>
+            <div class="item-form invisible">
+                <a href="./">
+                    <button class="navigation invisible">Go Back</button>
+                </a>
+            </div>          
+        </div>
     </div>
 {% endblock %}

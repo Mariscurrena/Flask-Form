@@ -6,6 +6,15 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
 }
+.main_form{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-left: 40dvb;
+  margin-right: 40dvb;
+  background-color: rgb(0, 0, 0, 0.0);
+  border: 0.5dvh solid rgb(0, 79, 189, 0.5);
+  border-radius: 2dvw;
+}
 .item{
   padding: 5px;
   display: flex;            
@@ -14,6 +23,16 @@
   margin-left: 7dvb;
   margin-right: 7dvb;
   /*border: 2px solid black;*/
+  height: 28dvh;
+}
+.item-form{
+  padding: 10px;
+  margin: 0.5dvw;
+  display: flex;            
+  justify-content: center;
+  align-items: center; 
+  /* border: 2px solid black; */
+  height: 18dvh;
 }
 .text{
   background-color: rgb(8, 111, 255, 0.1);
@@ -23,6 +42,15 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 5px;
 }
+.invisible{
+  background-color: rgb(0, 0, 0, 0.0);
+  /* border: 1px solid rgb(0, 79, 189); */
+}
+.center{
+  display: flex;            
+  justify-content: center;
+  align-items: center;
+}
 .textparr{ 
   background-color: rgb(8, 111, 255, 0.0);
   padding-left: 50px;
@@ -31,24 +59,47 @@
 }
 .imgdiv{
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
 }
 .img_size{
   width:15dvb;
   height: auto; 
 }
-h1, h2{
+.form{
+  display: flex;     
+  margin: 1dvw;       
+  justify-content: left;
+  align-items: center;
+}
+.form-label{
+  color: rgb(0, 0, 51);
+  font-size: 3dvh;
+  font-family: Arial;
+  font-weight: bold;
+}
+.form-control{
+  color: rgb(0, 79, 215);
+  font-size: 3dvh;
+  font-family: Arial;
+  width: 50dvh;
+}
+h1{
   color:rgb(5, 0, 77);
   font-size: 10dvh;
   font-family: Arial;
   text-align: center;
+}
+h3{
+  color:rgb(5, 0, 77);
+  font-size: 5dvh;
+  font-family: Arial;
+  font-style: italic;
 }
 p{
   color: rgb(0, 0, 51);
   font-size: 3dvh;
   font-family: Arial;
 }
-
 .navigation {
   font-family: Arial;
   color: #ffffff;
@@ -65,6 +116,7 @@ p{
   border: solid rgb(0, 0, 61) 2px;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#3f3ffa), to(rgb(5, 0, 77)));
   background: -moz-linear-gradient(top, #3f3ffa, #05004d);
+  width: 35dvw;
 }
 .navigation:hover {
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#8a8a8a), to(#ffffff));
